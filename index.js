@@ -5,10 +5,11 @@ const port = 8080;
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, "views"));
+app.set('public', path.join(__dirname, "public"));
 
 app.get('/', (req, res) => {
     console.log("Homepage has been loaded");
-    res.render('index.ejs')
+    res.render('index.ejs');
 });
 
 app.listen(port, () => {
